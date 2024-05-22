@@ -42,6 +42,7 @@ model File {
 model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String
+  phoneNumber String
   threads Thread[]
   sentFiles File[] @relation("SentFiles")
   receivedFiles File[] @relation("ReceivedFiles")
